@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springcloud-netflix-suite</module>
+        <module>springcloud-gateway-consul-suite</module>
     </modules>
 
     <name>simple-springcloud-demo</name>
