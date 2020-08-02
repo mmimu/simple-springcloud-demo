@@ -13,6 +13,8 @@ spring:
           uri: lb://service-provider
           predicates:
             - Path=/service/{segment}
+          filters:
+            - SetPath=/{segment}
 
 server:
   port: 9091
