@@ -26,4 +26,4 @@ spring:
       discovery:
         enabled: true
         register: true
-        service-name: spring-cloud-service-provider1
+        service-name: service-provider

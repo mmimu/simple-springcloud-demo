@@ -9,12 +9,10 @@ spring:
       port: 8500
     gateway:
       routes:
-        - id: service-provider1
-          uri: lb://service-provider1
+        - id: service-router
+          uri: lb://service-provider
           predicates:
-            - Path=/service-provider1/*
-          filters:
-            - StripPrefix=1
+            - Path=/service/*
 
 server:
   port: 9091
