@@ -1,0 +1,29 @@
+server:
+  port: 19092
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/education_school?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 10
+      idle-timeout: 600000
+      connection-timeout: 30000
+      max-lifetime: 180000
+  application:
+    name: spring-cloud-service-provider2
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        register: true
+        service-name: service-provider
