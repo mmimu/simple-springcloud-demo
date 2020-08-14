@@ -1,18 +1,18 @@
 spring:
   application:
-    name: spring-cloud-gateway-service
+    name: spring-cloud-registry-service
   cloud:
     consul:
       discovery:
-        register: true
+        register: false
       host: localhost
       port: 8500
     gateway:
       routes:
-        - id: service-router
-          uri: lb://service-provider
+        - id: provider-of-school-service
+          uri: lb://school-service
           predicates:
-            - Path=/service/{segment}
+            - Path=/school/service/{segment}
           filters:
             - SetPath=/{segment}
 

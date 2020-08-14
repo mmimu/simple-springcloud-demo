@@ -18,7 +18,7 @@ spring:
       connection-timeout: 30000
       max-lifetime: 180000
   application:
-    name: spring-cloud-service-provider1
+    name: school-service-provider
   cloud:
     consul:
       host: localhost
@@ -26,4 +26,4 @@ spring:
       discovery:
         enabled: true
         register: true
-        service-name: service-provider
+        service-name: school-service
