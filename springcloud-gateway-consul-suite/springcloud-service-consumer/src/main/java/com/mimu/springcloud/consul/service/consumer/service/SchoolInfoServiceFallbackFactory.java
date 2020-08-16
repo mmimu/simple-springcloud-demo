@@ -1,7 +1,7 @@
-package com.mimu.springcloud.ms.consumer.service;
+package com.mimu.springcloud.consul.service.consumer.service;
 
-import com.mimu.springcloud.ms.consumer.model.SchoolSchoolInfo;
-import com.mimu.springcloud.ms.consumer.request.SchoolRequest;
+import com.mimu.springcloud.consul.service.consumer.model.SchoolSchoolInfo;
+import com.mimu.springcloud.consul.service.consumer.request.SchoolRequest;
 import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class SchoolInfoServiceFallbackFactory implements FallbackFactory<ISchool
     public ISchoolInfoService create(Throwable cause) {
         return new ISchoolInfoService() {
             @Override
-            public SchoolSchoolInfo getSchoolInfo1(Map<String,Object> request) {
+            public SchoolSchoolInfo getSchoolInfo1(Map<String, Object> request) {
                 logger.error("getSchoolInfo1 fallback error={}", cause);
                 return null;
             }
