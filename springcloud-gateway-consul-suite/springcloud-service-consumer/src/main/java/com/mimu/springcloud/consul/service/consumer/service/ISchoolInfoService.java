@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
-@FeignClient(value = "school-service", fallback = SchoolInfoServiceFallback.class)
+@FeignClient(value = "school-service", /*fallback = SchoolInfoServiceFallback.class*/ fallbackFactory = SchoolInfoServiceFallbackFactory.class)
 public interface ISchoolInfoService {
 
     @GetMapping(value = "/school.do")
