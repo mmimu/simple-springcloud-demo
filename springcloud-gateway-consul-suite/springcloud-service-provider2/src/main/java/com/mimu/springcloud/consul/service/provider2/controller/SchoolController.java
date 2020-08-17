@@ -28,7 +28,7 @@ public class SchoolController {
     @RequestMapping(value = "/school.do", method = RequestMethod.GET)
     public SchoolSchoolInfo getUserData(SchoolRequest request) {
         SchoolSchoolInfo schoolInfo = schoolService.getSchoolInfo(request);
-        logger.info("request={},result={}", request, schoolInfo);
+        logger.info("provider2 request={},result={}", request, schoolInfo);
         return schoolInfo;
     }
 }
