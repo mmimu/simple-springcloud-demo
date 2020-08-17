@@ -11,8 +11,6 @@
     <modules>
         <module>springcloud-netflix-suite</module>
         <module>springcloud-gateway-consul-suite</module>
-        <module>springcloud-microservice-provider1</module>
-        <module>springcloud-microservice-consumer</module>
     </modules>
 
     <name>simple-springcloud-demo</name>
