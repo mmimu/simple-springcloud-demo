@@ -26,7 +26,8 @@ public class SchoolController {
     public SchoolSchoolInfo getUserData(SchoolRequest request) throws JsonProcessingException {
         Map map = objectMapper.readValue(objectMapper.writeValueAsString(request), Map.class);
         SchoolSchoolInfo schoolInfo = schoolInfoService.getSchoolInfo1(map);
-        logger.info("request={},result={}", request, schoolInfo);
+        SchoolSchoolInfo schoolInfo2 = schoolInfoService.getSchoolInfo2(request);
+        logger.info("request={},result1={},result2={}", request, schoolInfo, schoolInfo2);
         return schoolInfo;
     }
 }

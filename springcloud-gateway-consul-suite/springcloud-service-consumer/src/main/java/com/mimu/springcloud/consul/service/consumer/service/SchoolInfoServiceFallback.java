@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
+
 @Component
 public class SchoolInfoServiceFallback implements ISchoolInfoService{
     protected static final Logger logger = LoggerFactory.getLogger(SchoolInfoServiceFallback.class);
