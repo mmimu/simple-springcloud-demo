@@ -3,6 +3,9 @@ server:
 feign:
   hystrix:
     enabled: true
+  httpclient: ### 配置使用 ApacheHttpClient
+    enabled: true
+
 management:
   endpoints:
     web:
